@@ -12,5 +12,14 @@ public class ControlFlowExercises {
             // this is the incrememnt of i
             i++;
         }
+
+        int num =0;
+        // do while loop
+        do{
+            // prints out an integer
+            System.out.println(num);
+            // increment by 2 but stops at 100
+            num +=2;
+        }while(num <= 100);
     }
 }
