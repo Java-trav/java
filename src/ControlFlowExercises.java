@@ -21,5 +21,14 @@ public class ControlFlowExercises {
             // increment by 2 but stops at 100
             num +=2;
         }while(num <= 100);
+
+        int newNum= 100;
+        // do while loop
+        do{
+            // prints out an integer
+            System.out.println(newNum);
+            // decrement by 5 but stops at -10
+            newNum -=5;
+        }while(newNum >= -10);
     }
 }
