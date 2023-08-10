@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 
 public class ControlFlowExercises {
@@ -30,5 +30,11 @@ public class ControlFlowExercises {
             // decrement by 5 but stops at -10
             newNum -=5;
         }while(newNum >= -10);
+
+        int numTwo = 2;
+        do {
+            System.out.println(numTwo);
+            numTwo *= 2;
+        } while (numTwo <= 1000000);
     }
 }
