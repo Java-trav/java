@@ -1,5 +1,4 @@
-
-
+import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
@@ -49,5 +48,56 @@ public class ControlFlowExercises {
                 System.out.println(y);
             }
         }
+
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("What number would you like to go up to? ");
+            int n = scanner.nextInt();
+            displayPowersTable(n);
+
+            System.out.print("Do you want to continue? (yes/no): ");
+            String continueChoice = scanner.next().toLowerCase();
+            if (!continueChoice.equals("yes")) {
+                break;
+            }
+        }
+
+
+    }
+
+    public static void displayPowersTable(int n) {
+        System.out.println("Here is your table!\n");
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+
+        for (int i = 1; i <= n; i++) {
+            int squared = i * i;
+            int cubed = i * i * i;
+            System.out.printf("%-6d | %-7d | %-5d%n", i, squared, cubed);
+        }
+        System.out.println();
+// below code for new question grades
+        Scanner scanner = new Scanner(System.in);
+        String answer;
+        // do while loop with conditionals inside that prints different grade options
+        do{
+            System.out.println("Please enter a numerical grade: ");
+            int grade = scanner.nextInt();
+            if(grade >= 88 && grade <=100){
+                System.out.println("your grade is an A!");
+            }else if(grade >=80 && grade <= 87){
+                System.out.println("your grade is a B.");
+            }else if(grade >=67 && grade <= 79){
+                System.out.println("your grade is a C... could B better...");
+            }else if(grade >=60 && grade <= 66){
+                System.out.println("your grade is a D... did you study?");
+            }else{
+                System.out.println("your grade is a F... FATALITY!");
+            }
+            System.out.print("Do you want to continue? (yes or no): ");
+            answer = scanner.next();
+        }while(answer.equalsIgnoreCase("yes"));
+
     }
 }
